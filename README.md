@@ -4,21 +4,27 @@
  General
 
 . What do LIFO and FIFO mean
+
 . What is a stack, and when to use it
+
 . What is a queue, and when to use it
+
 . What are the common implementations of stacks and queues
+
 . What are the most common use cases of stacks and queues
+
 . What is the proper way to use global variables
 
  Installation
 
-Clone the repository https://git@github.com:MahiET/monty.git
+. Clone the repository https://git@github.com:MahiET/monty.git
 
-Compile the program gcc gcc -Wall -Werror -Wextra -pedantic -std=c90 *.c -o monty
+. Compile the program gcc gcc -Wall -Werror -Wextra -pedantic -std=c90 *.c -o monty
 
-Run the program as follows:
+. Run the program as follows:
 
 . Usage: monty <file.m>
+
 . Ex: ./monty ./bytecodes/00.m
 
 The Monty language
@@ -32,15 +38,22 @@ Files containing Monty byte codes usually have the .m extension. Most of the ind
 Example
 
 julien@ubuntu:~/monty$ cat -e bytecodes/000.m
+
 push 0$
+
 push 1$
+
 push 2$
-  push 3$
+
+push 3$
                    pall    $
 push 4$
-    push 5    $
-      push    6        $
+
+     push 5    $
+
+        push    6        $
 pall$
+
 julien@ubuntu:~/monty$
 
 
@@ -55,7 +68,8 @@ push 1 Push 1 onto the stack$
 $
 
 push 2$
-  push 3$
+
+    push 3$
                    pall    $
 $
 
@@ -63,8 +77,10 @@ $
                            $
 push 4$
 $
+
     push 5    $
-      push    6        $
+
+        push    6        $
 $
 
 pall This is the end of our program. Monty is awesome!$
@@ -75,6 +91,7 @@ julien@ubuntu:~/monty$
 Other files
 
 . monty.h - Header file; Contains function, struct and global variable declarations
+
 . bytecodes - A directory containing test files used while making this program
 
  Author
