@@ -96,4 +96,3 @@ void rotr(stack_t **stk, __attribute__((unused))unsigned int linenum)
 	(*stk)->prev = rev;
 	*stk = rev;
 }
-
