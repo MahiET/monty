@@ -27,7 +27,7 @@ int main(int argc, char **argv)
 		printf("Error: Can't open file %s\n", argv[1]);
 		exit(EXIT_FAILURE);
 	}
-		while (getline(&buff, &s, file) != -1)
+	while ((&buff, &s, file) != -1)
 	{
 		if (*buff != '\n')
 		{
