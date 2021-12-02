@@ -40,7 +40,7 @@ void pstr(stack_t **stk, __attribute__((unused)) unsigned int linenum)
 
 	str = *stk;
 
-	while (str != NULL && str->n != 0 && isascii(str->n))
+	while (str != NULL && str->n != 0 && (str->n))
 	{
 		printf("%c", str->n);
 		str = str->next;
