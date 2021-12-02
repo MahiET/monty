@@ -13,7 +13,7 @@ void pchar(stack_t **stk, unsigned int linenum)
 		printf("L%d: can't pchar, stack empty\n", linenum);
 		exit(EXIT_FAILURE);
 	}
-	if (variables.holder)
+	if (isascii(variables.holder))
 		printf("%c\n", variables.holder);
 	else
 	{
@@ -40,7 +40,7 @@ void pstr(stack_t **stk, __attribute__((unused)) unsigned int linenum)
 
 	str = *stk;
 
-	while (str != NULL && str->n != 0 && (str->n))
+	while (str != NULL && str->n != 0 && isascii(str->n))
 	{
 		printf("%c", str->n);
 		str = str->next;
@@ -96,3 +96,4 @@ void rotr(stack_t **stk, __attribute__((unused))unsigned int linenum)
 	(*stk)->prev = rev;
 	*stk = rev;
 }
+
