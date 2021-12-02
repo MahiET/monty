@@ -27,7 +27,7 @@ int main(int argc, char **argv)
 		printf("Error: Can't open file %s\n", argv[1]);
 		exit(EXIT_FAILURE);
 	}
-	while ((&buff, &s, file) != -1)
+	while (getline(&buff, &s, file) != -1)
 	{
 		if (*buff != '\n')
 		{
@@ -41,7 +41,7 @@ int main(int argc, char **argv)
 	if (stk != NULL)
 		free_stk(&stk, linenum);
 	return (EXIT_SUCCESS);
-	}
+}
 
 /**
  * _tokenizer - function to tokenize strings and commands
@@ -95,5 +95,6 @@ int check_digit(char *token)
 	token++;
 	return (1);
 }
+
 
  
