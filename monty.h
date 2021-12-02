@@ -50,7 +50,7 @@ typedef struct instruction_s
         void (*f)(stack_t **stack, unsigned int line_number);
 } instruction_t;
 
-void _tokenizer(char *string,*getline, stack_t **stk, unsigned int linenum);
+void _tokenizer(char *string, stack_t **stk, unsigned int linenum);
 void free_stk(stack_t **stk, unsigned int linenum);
 int check_digit(char *token);
 void _ops(char *token, stack_t **stk, unsigned int linenum);
