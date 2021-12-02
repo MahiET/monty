@@ -13,7 +13,7 @@ void pchar(stack_t **stk, unsigned int linenum)
 		printf("L%d: can't pchar, stack empty\n", linenum);
 		exit(EXIT_FAILURE);
 	}
-	if (isascii(variables.holder))
+	if (variables.holder)
 		printf("%c\n", variables.holder);
 	else
 	{
